@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
+
+@mixin button{
+    width: 100px;
+    height: 100px;
+    border:none;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffeaff, #e4c5e6);
+    box-shadow:  7px 7px 20px #dfc1e0,
+        -7px -7px 20px #fff5ff;
+    font-family:"BioRhyme", serif;
+    font-size:2rem;
+    color:#003D52;
+    border:#fff solid 1px;
+    cursor: pointer;
+}
+
+body{
+    background:#000;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.calculatrice{
+    width: 500px;
+    height: 700px;
+    padding: 50px;
+    border-radius:50px;
+    background: linear-gradient(#f7f7c8,#fddbff,#bfefff);
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-rows:repeat(5,1fr);
+    grid-template-columns:repeat(4,1fr);
+    grid-template-areas:"ecran ecran ecran ecran"
+                        "un deux trois plus"
+                        "quatre cinq six moins"
+                        "sept huit neuf multiplication"
+                        "zero par1 par2 diviser"
+                        "egal egal virgule del";
+    gap:10px;
+    justify-content: center;
+    align-items:center;
+    .ecran{
+        grid-area:ecran;
+        width: 500px;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        height: 140px;
+        outline: #d998ed solid 10px;
+        background: #ffffffab;
+        border-radius: 20px;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        padding: 10px;
+        margin-bottom: 20px;
+        div{
+            font-family:"BioRhyme", serif;
+            font-size:3.5rem;
+            color:#003D52;
+        }
+        img{
+            position: relative;
+            height: 140px;
+            transform: translate(-10px, 20px);
+        }
+    }
+    .un{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/f1/54/5a/f1545aac8abd334c32d659938e5c4646.gif");
+                background-size:contain;
+            }
+            transition:all 200ms;
+        }
+    }
+    .deux{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://media.tenor.com/K-4KulpZoNUAAAAM/yes-taylor-swift.gif");
+                background-size:contain;
+            }
+            transition:all 200ms;
+        }
+    }
+    .trois{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/3b/a3/0d/3ba30d76a6425fb652fe187e7d19e48e.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .plus{
+        button{
+            @include button;
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://gifdb.com/images/high/taylor-swift-head-turn-smile-lhbbqn53l8yssxtn.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .quatre{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://media.tenor.com/AJgLG0lHQbgAAAAC/taylor-swift-cheers.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .cinq{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/60/ae/bc/60aebc14d336784bcaaec4d634ba038a.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .six{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.makeagif.com/media/7-23-2018/sZ68c5.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .moins{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.makeagif.com/media/3-11-2018/ZrJvrE.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .sept{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/96/ae/56/96ae5616256e0763101b1bf64d44dccb.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .huit{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://25.media.tumblr.com/tumblr_mc87qfkudQ1r4uaieo1_500.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .neuf{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/5c/3e/54/5c3e5469c8349025937ef47b30812ac1.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .multiplication{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://www.icegif.com/wp-content/uploads/2023/11/icegif-599.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .zero{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://media3.giphy.com/media/dXKiD8XysOuhFAJB1f/giphy.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .par1{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://media3.giphy.com/media/2tg4k9pXNcGi7kZ9Pz/giphy.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .par2{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://media.tenor.com/R0C_Sa2mtVsAAAAM/taylorswift-taylor.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .egal{
+        grid-area:egal;
+        button{
+            @include button;
+            width:230px;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/88/59/44/8859442ea964dc521d1696468500512b.gif");
+                background-size:cover;
+            }
+            transition:all 200ms;
+        }
+    }
+    .virgule{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://www.gifcen.com/wp-content/uploads/2022/10/taylor-swift-gif-8.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .delete{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.gifer.com/VQRO.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    .division{
+        button{
+            @include button;
+            &:hover{
+                transform: scale(1.1);
+                background-image:url("https://i.pinimg.com/originals/5a/26/58/5a265880edc1f6f73c0647078daf3b80.gif");
+                background-size:cover;
+                background-position: center;
+            }
+            transition:all 200ms;
+        }
+    }
+    #disable{
+        button{
+            background: linear-gradient(145deg, #cdcdcd, #adadad);
+            box-shadow:  7px 7px 20px #a3a3a3,
+             -7px -7px 20px #dddddd;
+             &:hover{
+                transform: scale(1);
+             }
+        }
+    }
+}
